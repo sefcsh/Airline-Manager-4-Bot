@@ -28,7 +28,8 @@ export class GeneralUtils {
         await page.locator('#lEmail').press('Tab');
         await page.locator('#lPass').click();
         await page.locator('#lPass').fill(this.password);
-        await page.getByRole('button', { name: 'Login', exact: true }).click();
+        await page.locator('#btnLogin').click();
+
 
         await page.locator('#intro_popup span').click();
 
