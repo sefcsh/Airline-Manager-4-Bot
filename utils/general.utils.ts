@@ -23,8 +23,7 @@ export class GeneralUtils {
         await page.goto('https://www.airlinemanager.com/');
 
         await page.locator('button.play-now').click();
-        await page.waitForSelector('button.btn.btn-blue-border');
-        await page.locator('button.btn.btn-blue-border').click();
+        await page.locator('div.login-container button.btn.btn-blue-border').click(); 
         await page.locator('#lEmail').click();
         await page.locator('#lEmail').fill(this.username);
         await page.locator('#lEmail').press('Tab');
